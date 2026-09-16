@@ -3,7 +3,7 @@ export {};
 process.env.NODE_ENV = 'development';
 process.env.DEV_DATABASE = 'pglite';
 process.env.DEV_DATA_DIR ??= '.dev-data';
-process.env.HOST = '127.0.0.1';
+process.env.HOST ??= '127.0.0.1';
 const { database, migrate, load, save } = await import('./db.js');
 const { hashPassword } = await import('./auth.js');
 const { execute } = await import('./domain.js');
