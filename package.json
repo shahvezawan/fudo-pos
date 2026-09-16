@@ -1,0 +1,49 @@
+{
+  "name": "fudo-pos",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch server/index.ts",
+    "dev:demo": "tsx server/demo.ts",
+    "build": "tsc --noEmit && vite build",
+    "start": "tsx server/index.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "node scripts/browser-check.mjs",
+    "test:operations": "node scripts/browser-operations.mjs",
+    "test:refinements": "node scripts/browser-refinements.mjs",
+    "test:native": "node scripts/native-check.mjs",
+    "format:check": "prettier --check src server shared tests scripts/*.mjs docs README.md package.json tsconfig.json vite.config.ts",
+    "backup": "tsx server/backup-cli.ts",
+    "restore:verify": "tsx server/restore-verify.ts"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.14",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "pg": "^8.16.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "sharp": "^0.35.4",
+    "tsx": "^4.20.5",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.18.1",
+    "@types/pg": "^8.15.5",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^4.3.4",
+    "embedded-postgres": "18.4.0-beta.17",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.2",
+    "vite": "^6.1.0"
+  }
+}

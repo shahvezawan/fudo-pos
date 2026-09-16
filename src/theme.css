@@ -1,0 +1,15 @@
+:root {
+  --canvas: #f8f9f5;
+  --ink: #3f4838;
+  --muted: #919988;
+  --accent: #cb613e;
+  --border: #e8ebe1;
+  color-scheme: light;
+}
+.menu-area,
+.order-panel,
+.floor-strip,
+.dashboard-grid > .panel,
+.settings-grid > .panel {
+  min-width: 0;
+}

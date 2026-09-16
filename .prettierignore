@@ -1,0 +1,6 @@
+node_modules
+dist
+artifacts
+.dev-data
+.pnpm-store
+pnpm-lock.yaml
